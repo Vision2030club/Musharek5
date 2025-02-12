@@ -19,6 +19,9 @@
             display: none;
             margin-top: 20px;
             border: 1px solid #ddd;
+            width: 100%;
+            height: auto;
+            max-width: 100%; /* Make the image responsive */
         }
     </style>
 </head>
@@ -40,7 +43,7 @@
                 return;
             }
 
-            let imageUrl = "https://raw.githubusercontent.com/Vision2030club/Ana-hunak/9a66659e6c055b58487a6dc3514f03daf80e3eb2/IMG_3521.png";
+            let imageUrl = "https://raw.githubusercontent.com/Vision2030club/Musharek5/9f93cc8dcbdadfd468ca95a00330413be107d25d/IMG_3521.png";
             let canvas = document.getElementById("canvas");
             let ctx = canvas.getContext("2d");
             let img = new Image();
@@ -52,12 +55,12 @@
                 canvas.height = img.height;
                 ctx.drawImage(img, 0, 0);
                 
-                // Text settings
-                ctx.font = "50px Arial";
-                ctx.fillStyle = "white"; 
+                // Updated text settings
+                ctx.font = "100px 'Times New Roman'"; // Make the text bigger
+                ctx.fillStyle = "black"; // Text color
                 ctx.textAlign = "center";
-                ctx.fillText(name, canvas.width / 2, 80); // Adjust position here
-                
+                ctx.fillText(name, canvas.width / 2, canvas.height / 3); // Move name to upper-middle part
+
                 canvas.style.display = "block"; 
                 document.getElementById("downloadBtn").style.display = "block"; 
             };
