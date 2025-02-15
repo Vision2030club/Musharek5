@@ -43,7 +43,7 @@
                 return;
             }
 
-            let imageUrl = "https://raw.githubusercontent.com/Vision2030club/Musharek5/9f93cc8dcbdadfd468ca95a00330413be107d25d/IMG_3521.png";
+            let imageUrl = "http://127.0.0.1:5500/photo.png";
             let canvas = document.getElementById("canvas");
             let ctx = canvas.getContext("2d");
             let img = new Image();
@@ -56,10 +56,10 @@
                 ctx.drawImage(img, 0, 0);
                 
                 // Updated text settings
-                ctx.font = "100px 'Times New Roman'"; // Make the text bigger
+                ctx.font = "75px 'Arial'"; // Make the text bigger
                 ctx.fillStyle = "black"; // Text color
                 ctx.textAlign = "center";
-                ctx.fillText(name, canvas.width / 2, canvas.height / 3); // Move name to upper-middle part
+                ctx.fillText(name, canvas.width / 2, canvas.height / 2.3); // Move name to upper-middle part
 
                 canvas.style.display = "block"; 
                 document.getElementById("downloadBtn").style.display = "block"; 
